@@ -141,6 +141,7 @@ const CardAboutTwo = () => {
               alt={item.name}
               width={52.58}
               height={52.58}
+              className='pointer-events-none'
             />
           ))}
         </div>
@@ -159,7 +160,7 @@ const CardAboutThree = () => {
         alt='experience'
         fill
         sizes='100%'
-        className='object-cover'
+        className='pointer-events-none object-cover'
       />
 
       {/* Experience text */}
@@ -189,7 +190,7 @@ const CardAboutThree = () => {
               alt={`project-${index}`}
               fill
               sizes='100%'
-              className='object-cover'
+              className='pointer-events-none object-cover'
             />
           </div>
         ))}
@@ -208,7 +209,7 @@ const CardAboutFour = () => {
           alt='pattern'
           fill
           sizes='100%'
-          className='aspect-ratio object-cover'
+          className='aspect-ratio pointer-events-none object-cover'
         />
       </div>
 
@@ -230,7 +231,7 @@ const CardAboutFour = () => {
           alt='profile'
           fill
           sizes='100%'
-          className='object-cover'
+          className='pointer-events-none object-cover'
         />
       </div>
 
@@ -265,7 +266,7 @@ const CardAboutFive = () => {
               alt='stars'
               width={24}
               height={24}
-              className='aspect-square'
+              className='pointer-events-none aspect-square'
             />
           </div>
         </div>
@@ -290,7 +291,7 @@ const CardAboutFive = () => {
           alt='world-map'
           fill
           sizes='100%'
-          className='max-sm:mt-13.5'
+          className='pointer-events-none max-sm:mt-13.5'
         />
 
         {/* Image Flags of Nation */}
@@ -300,7 +301,7 @@ const CardAboutFive = () => {
           alt='germany'
           width={72}
           height={32}
-          className='aspect-ratio absolute top-[29.2%] left-[35%] z-40 sm:top-[34%] sm:left-[14.94%]'
+          className='aspect-ratio pointer-events-none absolute top-[29.2%] left-[35%] z-40 sm:top-[34%] sm:left-[14.94%]'
         />
 
         {/* America */}
@@ -309,7 +310,7 @@ const CardAboutFive = () => {
           alt='america'
           width={72}
           height={32}
-          className='aspect-ratio object-fit absolute top-[46%] left-[52.5%] z-40 sm:top-[27%] sm:left-[74%]'
+          className='aspect-ratio object-fit pointer-events-none absolute top-[46%] left-[52.5%] z-40 sm:top-[27%] sm:left-[74%]'
         />
 
         {/* Indonesia */}
@@ -318,7 +319,7 @@ const CardAboutFive = () => {
           alt='indonesia'
           width={72}
           height={32}
-          className='aspect-ratio absolute top-[75.66%] left-[49.7%] z-40 sm:top-[61.5%] sm:left-[82.5%]'
+          className='aspect-ratio pointer-events-none absolute top-[75.66%] left-[49.7%] z-40 sm:top-[61.5%] sm:left-[82.5%]'
         />
       </div>
     </CardAbout>

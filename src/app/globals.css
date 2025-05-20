@@ -5,6 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* design system */
 @theme {
   /* Display */
@@ -207,8 +211,7 @@
 
 @body {
   @apply bg-base-white text-base-black text-sm-regular;
-
-  font-family: Poppins, var(--font-poppins), ui-sans-serif;
+  font-family: Poppins, var(--font-poppins);
 }
 
 @layer components {
@@ -236,7 +239,7 @@
 
   .shadow-card {
     @apply border border-[rgba(213,215,218,0.3)];
-    box-shadow: 0 0 24px rgba(165, 165, 165, 0.2);
+    box-shadow: 0 0 1.5rem rgba(165, 165, 165, 0.2);
   }
 
   .blue-gradient {

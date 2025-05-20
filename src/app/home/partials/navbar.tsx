@@ -19,6 +19,9 @@ import {
 import { navData } from '@/constants/nav-data';
 
 const Navbar = () => {
+  const [open, setOpen] = React.useState(false);
+  console.log('navbar: ', open);
+
   const { scrollY } = useScroll();
   const background = useTransform(
     scrollY,
@@ -67,7 +70,7 @@ const Navbar = () => {
         </Button>
 
         {/* mobile menu */}
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Image
               src='/images/menu.svg'
@@ -96,7 +99,7 @@ const Navbar = () => {
                     <SheetClose asChild>
                       <Link
                         href={href}
-                        className='text-md-regular text-primary-300 before:bg-primary-300 relative pb-1 text-neutral-950 before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:transition-all before:duration-400 hover:before:w-full'
+                        className='text-md-regular hover:text-primary-300 before:bg-primary-300 relative pb-1 text-neutral-950 before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:rounded-full before:transition-all before:duration-400 hover:before:w-full'
                       >
                         {label}
                       </Link>
@@ -105,7 +108,21 @@ const Navbar = () => {
                 ))}
               </ul>
             </nav>
-            <Button asChild className='w-full' variant='primary'>
+            <Button
+              asChild
+              className='w-full'
+              variant='primary'
+              onClick={() => {
+                setOpen(false);
+                // Delay to allow menu to close smoothly
+                setTimeout(() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }, 500);
+              }}
+            >
               <Link href='#contact'>
                 <Mail className='size-5' />
                 Hire Me

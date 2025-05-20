@@ -87,7 +87,7 @@ const Pagination: React.FC<PaginationProps> = ({
           <motion.div
             key={activeIndex}
             className={cn(
-              'flex w-full flex-wrap justify-center gap-4',
+              'flex w-full flex-wrap justify-center gap-4 px-1 py-5',
               contentClassName
             )}
             initial={{ opacity: 0, x: 50 }}

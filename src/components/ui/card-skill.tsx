@@ -29,7 +29,7 @@ const CardSkill: React.FC<CardSkillProps> = ({
     <div className='bg-base-white shadow-card flex-1 basis-100 rounded-xl p-3 pb-4 md:rounded-2xl md:p-4'>
       {/* header */}
       <div className='flex-start flex h-10 gap-3'>
-        <Image src={icon} alt={name} />
+        <Image src={icon} alt={name} className='pointer-events-none' />
         <p className='text-md-semibold md:text-lg-semibold text-neutral-950'>
           {name}
         </p>

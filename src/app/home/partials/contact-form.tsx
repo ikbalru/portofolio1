@@ -64,7 +64,7 @@ const formSchema = z.object({
       required_error: 'Message is required',
     })
     .min(20, 'Message must be at least 10 characters long')
-    .max(500, 'Message must be at most 500 characters long'),
+    .max(300, 'Message must be at most 300 characters long'),
 });
 
 const ContactForm = () => {
@@ -121,10 +121,10 @@ const ContactForm = () => {
             <div className='mt-6 flex flex-col gap-6 md:mt-10 md:gap-8'>
               {contactFields.map(({ label, icon, link }) => (
                 <div
-                  className='group/contact flex-start flex cursor-pointer gap-2 md:gap-4'
+                  className='group/contact flex-start flex w-fit gap-2 md:gap-4'
                   key={label}
                 >
-                  <div className='text-primary-300 flex-center flex h-10 w-10 rounded-full bg-neutral-100 md:h-12 md:w-12'>
+                  <div className='text-primary-300 flex-center flex h-10 w-10 cursor-pointer rounded-full bg-neutral-100 md:h-12 md:w-12'>
                     {React.createElement(icon, {
                       className: 'h-5 w-5 md:h-6 md:w-6',
                     })}

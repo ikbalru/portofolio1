@@ -78,46 +78,46 @@ export const skillData: Icon[] = [
       'Building the structure of web pages with semantic markup for accessibility .',
     percentage: '90',
   },
-  {
-    src: iconReact,
-    name: 'React JS',
-    description:
-      'Building the structure of web pages with semantic markup for accessibility .',
-    percentage: '90',
-  },
-  {
-    src: iconMongo,
-    name: 'Mongo DB',
-    description:
-      'Building the structure of web pages with semantic markup for accessibility .',
-    percentage: '90',
-  },
-  {
-    src: iconDocker,
-    name: 'Docker',
-    description:
-      'Building the structure of web pages with semantic markup for accessibility .',
-    percentage: '90',
-  },
-  {
-    src: iconHTML,
-    name: 'HTML',
-    description:
-      'Building the structure of web pages with semantic markup for accessibility .',
-    percentage: '90',
-  },
-  {
-    src: iconCSS,
-    name: 'CSS',
-    description:
-      'Building the structure of web pages with semantic markup for accessibility .',
-    percentage: '90',
-  },
-  {
-    src: iconJavascript,
-    name: 'Javascript',
-    description:
-      'Building the structure of web pages with semantic markup for accessibility .',
-    percentage: '90',
-  },
+  // {
+  //   src: iconReact,
+  //   name: 'React JS',
+  //   description:
+  //     'Building the structure of web pages with semantic markup for accessibility .',
+  //   percentage: '90',
+  // },
+  // {
+  //   src: iconMongo,
+  //   name: 'Mongo DB',
+  //   description:
+  //     'Building the structure of web pages with semantic markup for accessibility .',
+  //   percentage: '90',
+  // },
+  // {
+  //   src: iconDocker,
+  //   name: 'Docker',
+  //   description:
+  //     'Building the structure of web pages with semantic markup for accessibility .',
+  //   percentage: '90',
+  // },
+  // {
+  //   src: iconHTML,
+  //   name: 'HTML',
+  //   description:
+  //     'Building the structure of web pages with semantic markup for accessibility .',
+  //   percentage: '90',
+  // },
+  // {
+  //   src: iconCSS,
+  //   name: 'CSS',
+  //   description:
+  //     'Building the structure of web pages with semantic markup for accessibility .',
+  //   percentage: '90',
+  // },
+  // {
+  //   src: iconJavascript,
+  //   name: 'Javascript',
+  //   description:
+  //     'Building the structure of web pages with semantic markup for accessibility .',
+  //   percentage: '90',
+  // },
 ];

@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <Image
         src={image}
         alt={label}
-        className='aspect-square rounded-[0.625rem] object-cover transition duration-300 group-hover/project:scale-103 group-hover/project:shadow-lg md:rounded-[0.75rem]'
+        className='pointer-events-none aspect-square rounded-[0.625rem] object-cover transition duration-300 group-hover/project:scale-103 group-hover/project:shadow-lg md:rounded-[0.75rem]'
       />
       <h3 className='text-md-semibold md:text-xl-semibold group-hover/project:text-primary-300 text-neutral-950 transition duration-300'>
         {title}

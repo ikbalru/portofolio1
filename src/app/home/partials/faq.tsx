@@ -36,6 +36,7 @@ const FAQ = () => {
             type='single'
             collapsible
             className='self-center md:col-start-2 md:row-span-3 md:row-start-1 md:mt-10'
+            defaultValue='item-0'
           >
             {faqData.map(({ title, description }, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
@@ -54,7 +55,7 @@ const FAQ = () => {
                   alt='profile'
                   width={80}
                   height={80}
-                  className='absolute mx-auto mt-1'
+                  className='pointer-events-none absolute mx-auto mt-1'
                 />
               </div>
               <p className='md:text-lg-regular text-sm-regular text-neutral-950'>

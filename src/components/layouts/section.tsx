@@ -7,6 +7,7 @@ type SectionProps = {
   title?: string;
   id?: string;
   className?: string;
+  contentClassName?: string;
 };
 
 export const Section: React.FC<SectionProps> = ({
@@ -14,6 +15,7 @@ export const Section: React.FC<SectionProps> = ({
   title,
   id,
   className,
+  contentClassName,
 }) => {
   return (
     <div className={cn('custom-container py-10 md:py-20', className)} id={id}>
@@ -25,7 +27,7 @@ export const Section: React.FC<SectionProps> = ({
       </div>
 
       {/* content */}
-      <div className='mt-6 md:mt-12'>{children}</div>
+      <div className={cn('mt-6 md:mt-12', contentClassName)}>{children}</div>
     </div>
   );
 };

@@ -47,7 +47,7 @@ const Hero = () => {
             alt='hero-image'
             fill
             sizes='100%'
-            className='aspect-ratio object-contain'
+            className='aspect-ratio pointer-events-none object-contain'
             priority
           />
         </div>
@@ -234,7 +234,7 @@ const CardClient: React.FC<CardProps> = ({ className }) => {
               alt={`client-${index}`}
               fill
               sizes='100%'
-              style={{ objectFit: 'contain' }}
+              className='pointer-events-none object-contain'
             />
           </div>
         ))}
@@ -314,7 +314,7 @@ const MarqueeHero = () => {
                 alt='vector-icon'
                 fill
                 sizes='100%'
-                className='object-contain'
+                className='pointer-events-none object-contain'
               />
             </div>
             <p

@@ -1,5 +1,8 @@
+'use client';
+
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
+import { motion } from 'motion/react';
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -9,10 +12,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary:
-          'bg-primary-300 text-sm-medium text-neutral-25 hover:shadow-[0_0_15px_rgba(102,0,235,0.6)]',
-        secondary:
-          'bg-neutral-25 text-neutral-950 text-sm-medium hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]',
+        primary: 'bg-primary-300 text-sm-medium text-neutral-25',
+        secondary: 'bg-neutral-25 text-neutral-950 text-sm-medium',
       },
       size: {
         sm: 'h-12 pr-[2.8rem] pl-[2.92rem]',
@@ -39,11 +40,17 @@ function Button({
   const Comp = asChild ? Slot : 'button';
 
   return (
-    <Comp
-      data-slot='button'
-      className={cn(buttonVariants({ variant, size, className }))}
-      {...props}
-    />
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+    >
+      <Comp
+        data-slot='button'
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      />
+    </motion.div>
   );
 }
 

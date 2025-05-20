@@ -1,25 +1,44 @@
+'use client';
+
 import { Icon } from '@iconify/react';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
+import { useMedia } from 'react-use';
 
 import { Section } from '@/components/layouts/section';
-import Pagination from '@/components/ui/pagination';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselDotButton,
+  CarouselItem,
+} from '@/components/ui/carousel';
 
 import { testimonialsData } from '@/constants/testimonials-data';
 
 const Testimonials = () => {
+  const isDekstop = useMedia('(min-width: 1024px)');
+  const isTablet = useMedia('(min-width: 768px) and (max-width: 1023px)');
+
+  const itemsPerPage = isDekstop ? 3 : isTablet ? 2 : 1;
+
   return (
-    <Section title='Success Stories from Clients'>
-      <Pagination
-        totalItems={testimonialsData.length}
-        desktopItemsPerPage={3}
-        mobileItemsPerPage={1}
-        className='flex gap-5'
-      >
-        {testimonialsData.map((item, index) => (
-          <TestimonialsCard key={`${index}-${item.name}`} {...item} />
-        ))}
-      </Pagination>
+    <Section
+      title='Success Stories from Clients'
+      contentClassName='mt-1 md:mt-7'
+    >
+      <Carousel opts={{ align: 'end', slidesToScroll: itemsPerPage }}>
+        <CarouselContent>
+          {testimonialsData.map((item, index) => (
+            <CarouselItem
+              key={`${index}-${item.name}`}
+              className='basis-1/1 md:basis-1/2 lg:basis-1/3'
+            >
+              <TestimonialsCard {...item} />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselDotButton />
+      </Carousel>
     </Section>
   );
 };
@@ -42,19 +61,19 @@ const TestimonialsCard: React.FC<TestimonialsCardProps> = ({
   testimonial,
 }) => {
   return (
-    <div className='flex-center shadow-card flex w-95.25 flex-1 basis-80 flex-col rounded-xl p-4 pb-12 max-md:w-full md:rounded-2xl md:p-6'>
+    <div className='shadow-card rounded-xl border bg-white p-4 pb-12 text-center md:rounded-2xl md:p-6'>
       <Image
         src={icon}
         alt='icon'
         width={102}
         height={32}
-        className='md:h-12 md:w-28.5'
+        className='mx-auto md:h-12 md:w-28.5'
       />
       <p className='md:text-md-medium text-sm-medium mt-3 line-clamp-4 text-neutral-950 md:mt-4'>
         {testimonial}
       </p>
 
-      <div className='mt-5 flex gap-1 md:mt-8'>
+      <div className='mt-5 flex justify-center gap-1 md:mt-8'>
         {new Array(rating).fill(null).map((_, index) => (
           <Icon
             key={index}

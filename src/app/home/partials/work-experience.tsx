@@ -42,7 +42,7 @@ const WorkExperience = () => {
               alt={company}
               width={102}
               height={32}
-              className='md:h-12 md:w-38'
+              className='pointer-events-none md:h-12 md:w-38'
             />
             <p className='md:text-xl-semibold text-md-semibold text-neutral-950'>
               {company}
